@@ -35,8 +35,8 @@ public class Mkeyvault implements Ikeyvault{
 			}	    		        
 	    } catch (JSONException e) {
 	    	logger.error("valores- "+e.getMessage());
-		    return "{valor:"+e.getMessage()+"}";
 	    }
+	    return null;
 	}
 	
 	@Override
@@ -55,8 +55,8 @@ public class Mkeyvault implements Ikeyvault{
 			  return secret.getValue();
 		} catch (Exception e) {
 			logger.error("value- "+e.getMessage());
+			return "{valor:"+e.getMessage()+"}";
 		}
-		return null;
 	}
 	
 	@Override
