@@ -33,7 +33,7 @@ public class Mkeyvault implements Ikeyvault{
 				default:
 					return null;
 			}	    		        
-	    } catch (JSONException e) {	    	
+	    } catch (JSONException e) {
 	    	logger.error("valores- "+e.getMessage());
 	    }
 	    return null;
@@ -48,16 +48,15 @@ public class Mkeyvault implements Ikeyvault{
 	                  .tenantId("94de3208-b3fe-4ef4-8a57-b11a568a89a9")
 	                  .build();
 			 SecretClient secretClient = new SecretClientBuilder()
-	                  .vaultUrl("https://concftpprod.vault.azure.ne/")
+	                  .vaultUrl("https://concftpprod.vault.azure.net/")
 	                  .credential(clientSecretCredential)
 	                  .buildClient();
 			  KeyVaultSecret secret = secretClient.getSecret(key);
-			  
-			  return (secret.getValue()== null)?"{\"valores\":\"error\"}":secret.getValue();
+			  return secret.getValue();
 		} catch (Exception e) {
 			logger.error("value- "+e.getMessage());
-			return "{\"valores\":\""+e.getMessage()+"\"}";
 		}
+		return null;
 	}
 	
 	@Override
