@@ -479,6 +479,20 @@ public interface DigiFactSoap {
 
     /**
      * 
+     * @param xmlrequest
+     * @return
+     *     returns org.tempuri.XMLCFDIResponsePASE
+     */
+    @WebMethod(operationName = "ObtenXMLPASE", action = "http://tempuri.org/ObtenXMLPASE")
+    @WebResult(name = "ObtenXMLPASEResult", targetNamespace = "http://tempuri.org/")
+    @RequestWrapper(localName = "ObtenXMLPASE", targetNamespace = "http://tempuri.org/", className = "org.tempuri.ObtenXMLPASE")
+    @ResponseWrapper(localName = "ObtenXMLPASEResponse", targetNamespace = "http://tempuri.org/", className = "org.tempuri.ObtenXMLPASEResponse")
+    public XMLCFDIResponsePASE obtenXMLPASE(
+        @WebParam(name = "xmlrequest", targetNamespace = "http://tempuri.org/")
+        XMLCFDIRequestPASE xmlrequest);
+
+    /**
+     * 
      * @param requestOtroPac
      * @return
      *     returns org.tempuri.CancelacionResponseOtroPac

@@ -69,6 +69,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="DecimalesOfficeMax" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
  *         &lt;element name="ImporteConcepto" type="{http://www.w3.org/2001/XMLSchema}double"/&gt;
  *         &lt;element name="CodigoConcepto" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="DecimalesCobama" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="complementos" type="{http://tempuri.org/}ComplementosCFDI40" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -130,6 +131,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "decimalesOfficeMax",
     "importeConcepto",
     "codigoConcepto",
+    "decimalesCobama",
     "complementos"
 })
 public class DatosCFDI40 {
@@ -235,6 +237,8 @@ public class DatosCFDI40 {
     protected double importeConcepto;
     @XmlElement(name = "CodigoConcepto")
     protected String codigoConcepto;
+    @XmlElement(name = "DecimalesCobama")
+    protected int decimalesCobama;
     protected ComplementosCFDI40 complementos;
 
     /**
@@ -1379,6 +1383,22 @@ public class DatosCFDI40 {
      */
     public void setCodigoConcepto(String value) {
         this.codigoConcepto = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad decimalesCobama.
+     * 
+     */
+    public int getDecimalesCobama() {
+        return decimalesCobama;
+    }
+
+    /**
+     * Define el valor de la propiedad decimalesCobama.
+     * 
+     */
+    public void setDecimalesCobama(int value) {
+        this.decimalesCobama = value;
     }
 
     /**

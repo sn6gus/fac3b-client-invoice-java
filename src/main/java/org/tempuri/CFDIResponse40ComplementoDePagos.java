@@ -4,7 +4,9 @@ package org.tempuri;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -28,6 +30,8 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="FechaTimbrado" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="CompanyBP" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="FiscalYearBP" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="FechaTimbradoPase" type="{http://www.w3.org/2001/XMLSchema}dateTime"/&gt;
+ *         &lt;element name="EstatusPublicacion" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -48,7 +52,9 @@ import javax.xml.bind.annotation.XmlType;
     "version",
     "fechaTimbrado",
     "companyBP",
-    "fiscalYearBP"
+    "fiscalYearBP",
+    "fechaTimbradoPase",
+    "estatusPublicacion"
 })
 public class CFDIResponse40ComplementoDePagos {
 
@@ -74,6 +80,11 @@ public class CFDIResponse40ComplementoDePagos {
     protected String companyBP;
     @XmlElement(name = "FiscalYearBP")
     protected String fiscalYearBP;
+    @XmlElement(name = "FechaTimbradoPase", required = true)
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar fechaTimbradoPase;
+    @XmlElement(name = "EstatusPublicacion")
+    protected boolean estatusPublicacion;
 
     /**
      * Obtiene el valor de la propiedad xmlcfdi.
@@ -329,6 +340,46 @@ public class CFDIResponse40ComplementoDePagos {
      */
     public void setFiscalYearBP(String value) {
         this.fiscalYearBP = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad fechaTimbradoPase.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getFechaTimbradoPase() {
+        return fechaTimbradoPase;
+    }
+
+    /**
+     * Define el valor de la propiedad fechaTimbradoPase.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setFechaTimbradoPase(XMLGregorianCalendar value) {
+        this.fechaTimbradoPase = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad estatusPublicacion.
+     * 
+     */
+    public boolean isEstatusPublicacion() {
+        return estatusPublicacion;
+    }
+
+    /**
+     * Define el valor de la propiedad estatusPublicacion.
+     * 
+     */
+    public void setEstatusPublicacion(boolean value) {
+        this.estatusPublicacion = value;
     }
 
 }

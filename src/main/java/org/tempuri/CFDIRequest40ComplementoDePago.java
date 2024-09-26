@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="CFDIRelacion40" type="{http://tempuri.org/}ArrayOfCFDISRelacionados40" minOccurs="0"/&gt;
  *         &lt;element name="ReceptorCFDI" type="{http://tempuri.org/}ReceptorCFDI40" minOccurs="0"/&gt;
  *         &lt;element name="ConceptosCFD" type="{http://tempuri.org/}ConceptosCFDI40" minOccurs="0"/&gt;
+ *         &lt;element name="DomicilioReceptorCP" type="{http://tempuri.org/}DomicilioReceptorCP" minOccurs="0"/&gt;
  *         &lt;element name="Addenda" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="IdBPPago" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="Pago" type="{http://tempuri.org/}ComplementoPagos40" minOccurs="0"/&gt;
@@ -42,6 +43,7 @@ import javax.xml.bind.annotation.XmlType;
     "cfdiRelacion40",
     "receptorCFDI",
     "conceptosCFD",
+    "domicilioReceptorCP",
     "addenda",
     "idBPPago",
     "pago"
@@ -60,6 +62,8 @@ public class CFDIRequest40ComplementoDePago {
     protected ReceptorCFDI40 receptorCFDI;
     @XmlElement(name = "ConceptosCFD")
     protected ConceptosCFDI40 conceptosCFD;
+    @XmlElement(name = "DomicilioReceptorCP")
+    protected DomicilioReceptorCP domicilioReceptorCP;
     @XmlElement(name = "Addenda")
     protected String addenda;
     @XmlElement(name = "IdBPPago")
@@ -209,6 +213,30 @@ public class CFDIRequest40ComplementoDePago {
      */
     public void setConceptosCFD(ConceptosCFDI40 value) {
         this.conceptosCFD = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad domicilioReceptorCP.
+     * 
+     * @return
+     *     possible object is
+     *     {@link DomicilioReceptorCP }
+     *     
+     */
+    public DomicilioReceptorCP getDomicilioReceptorCP() {
+        return domicilioReceptorCP;
+    }
+
+    /**
+     * Define el valor de la propiedad domicilioReceptorCP.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link DomicilioReceptorCP }
+     *     
+     */
+    public void setDomicilioReceptorCP(DomicilioReceptorCP value) {
+        this.domicilioReceptorCP = value;
     }
 
     /**

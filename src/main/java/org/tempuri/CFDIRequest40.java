@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="CFDIRelacion40" type="{http://tempuri.org/}ArrayOfCFDISRelacionados40" minOccurs="0"/&gt;
  *         &lt;element name="InformacionGlobal" type="{http://tempuri.org/}InformacionGlobal" minOccurs="0"/&gt;
  *         &lt;element name="ReceptorCFDI40" type="{http://tempuri.org/}ReceptorCFDI40" minOccurs="0"/&gt;
+ *         &lt;element name="DomicilioReceptorCP" type="{http://tempuri.org/}DomicilioReceptorCP" minOccurs="0"/&gt;
  *         &lt;element name="ConceptosCFDI40" type="{http://tempuri.org/}ConceptosCFDI40" minOccurs="0"/&gt;
  *         &lt;element name="Addenda" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="Addenda2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
@@ -43,6 +44,7 @@ import javax.xml.bind.annotation.XmlType;
     "cfdiRelacion40",
     "informacionGlobal",
     "receptorCFDI40",
+    "domicilioReceptorCP",
     "conceptosCFDI40",
     "addenda",
     "addenda2",
@@ -62,6 +64,8 @@ public class CFDIRequest40 {
     protected InformacionGlobal informacionGlobal;
     @XmlElement(name = "ReceptorCFDI40")
     protected ReceptorCFDI40 receptorCFDI40;
+    @XmlElement(name = "DomicilioReceptorCP")
+    protected DomicilioReceptorCP domicilioReceptorCP;
     @XmlElement(name = "ConceptosCFDI40")
     protected ConceptosCFDI40 conceptosCFDI40;
     @XmlElement(name = "Addenda")
@@ -213,6 +217,30 @@ public class CFDIRequest40 {
      */
     public void setReceptorCFDI40(ReceptorCFDI40 value) {
         this.receptorCFDI40 = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad domicilioReceptorCP.
+     * 
+     * @return
+     *     possible object is
+     *     {@link DomicilioReceptorCP }
+     *     
+     */
+    public DomicilioReceptorCP getDomicilioReceptorCP() {
+        return domicilioReceptorCP;
+    }
+
+    /**
+     * Define el valor de la propiedad domicilioReceptorCP.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link DomicilioReceptorCP }
+     *     
+     */
+    public void setDomicilioReceptorCP(DomicilioReceptorCP value) {
+        this.domicilioReceptorCP = value;
     }
 
     /**

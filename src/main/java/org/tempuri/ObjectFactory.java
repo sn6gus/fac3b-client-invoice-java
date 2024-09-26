@@ -918,6 +918,38 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ObtenXMLPASE }
+     * 
+     */
+    public ObtenXMLPASE createObtenXMLPASE() {
+        return new ObtenXMLPASE();
+    }
+
+    /**
+     * Create an instance of {@link XMLCFDIRequestPASE }
+     * 
+     */
+    public XMLCFDIRequestPASE createXMLCFDIRequestPASE() {
+        return new XMLCFDIRequestPASE();
+    }
+
+    /**
+     * Create an instance of {@link ObtenXMLPASEResponse }
+     * 
+     */
+    public ObtenXMLPASEResponse createObtenXMLPASEResponse() {
+        return new ObtenXMLPASEResponse();
+    }
+
+    /**
+     * Create an instance of {@link XMLCFDIResponsePASE }
+     * 
+     */
+    public XMLCFDIResponsePASE createXMLCFDIResponsePASE() {
+        return new XMLCFDIResponsePASE();
+    }
+
+    /**
      * Create an instance of {@link SubeArchivoOtroPac }
      * 
      */
@@ -3331,6 +3363,14 @@ public class ObjectFactory {
      */
     public ReceptorCFDI40 createReceptorCFDI40() {
         return new ReceptorCFDI40();
+    }
+
+    /**
+     * Create an instance of {@link DomicilioReceptorCP }
+     * 
+     */
+    public DomicilioReceptorCP createDomicilioReceptorCP() {
+        return new DomicilioReceptorCP();
     }
 
     /**

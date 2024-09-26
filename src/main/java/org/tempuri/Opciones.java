@@ -187,9 +187,12 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="Bellota" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
  *         &lt;element name="MesFinanzas" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
  *         &lt;element name="EquivalenciaDR10" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
- *         &lt;element name="Lanceta" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
  *         &lt;element name="MontoOrigenRecursoWS" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="NoTieneFolioPromocion" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
  *         &lt;element name="TSJ" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="Lanceta" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="DireccionEmisorCobama" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="COBAMA" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -370,9 +373,12 @@ import javax.xml.bind.annotation.XmlType;
     "bellota",
     "mesFinanzas",
     "equivalenciaDR10",
-    "lanceta",
     "montoOrigenRecursoWS",
-    "tsj"
+    "noTieneFolioPromocion",
+    "tsj",
+    "lanceta",
+    "direccionEmisorCobama",
+    "cobama"
 })
 public class Opciones {
 
@@ -714,12 +720,18 @@ public class Opciones {
     protected boolean mesFinanzas;
     @XmlElement(name = "EquivalenciaDR10")
     protected boolean equivalenciaDR10;
-    @XmlElement(name = "Lanceta")
-    protected boolean lanceta;
     @XmlElement(name = "MontoOrigenRecursoWS")
     protected boolean montoOrigenRecursoWS;
+    @XmlElement(name = "NoTieneFolioPromocion")
+    protected boolean noTieneFolioPromocion;
     @XmlElement(name = "TSJ")
     protected boolean tsj;
+    @XmlElement(name = "Lanceta")
+    protected boolean lanceta;
+    @XmlElement(name = "DireccionEmisorCobama")
+    protected boolean direccionEmisorCobama;
+    @XmlElement(name = "COBAMA")
+    protected boolean cobama;
 
     /**
      * Obtiene el valor de la propiedad tickets.
@@ -3442,22 +3454,6 @@ public class Opciones {
     }
 
     /**
-     * Obtiene el valor de la propiedad lanceta.
-     * 
-     */
-    public boolean isLanceta() {
-        return lanceta;
-    }
-
-    /**
-     * Define el valor de la propiedad lanceta.
-     * 
-     */
-    public void setLanceta(boolean value) {
-        this.lanceta = value;
-    }
-
-    /**
      * Obtiene el valor de la propiedad montoOrigenRecursoWS.
      * 
      */
@@ -3474,6 +3470,22 @@ public class Opciones {
     }
 
     /**
+     * Obtiene el valor de la propiedad noTieneFolioPromocion.
+     * 
+     */
+    public boolean isNoTieneFolioPromocion() {
+        return noTieneFolioPromocion;
+    }
+
+    /**
+     * Define el valor de la propiedad noTieneFolioPromocion.
+     * 
+     */
+    public void setNoTieneFolioPromocion(boolean value) {
+        this.noTieneFolioPromocion = value;
+    }
+
+    /**
      * Obtiene el valor de la propiedad tsj.
      * 
      */
@@ -3487,6 +3499,54 @@ public class Opciones {
      */
     public void setTSJ(boolean value) {
         this.tsj = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad lanceta.
+     * 
+     */
+    public boolean isLanceta() {
+        return lanceta;
+    }
+
+    /**
+     * Define el valor de la propiedad lanceta.
+     * 
+     */
+    public void setLanceta(boolean value) {
+        this.lanceta = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad direccionEmisorCobama.
+     * 
+     */
+    public boolean isDireccionEmisorCobama() {
+        return direccionEmisorCobama;
+    }
+
+    /**
+     * Define el valor de la propiedad direccionEmisorCobama.
+     * 
+     */
+    public void setDireccionEmisorCobama(boolean value) {
+        this.direccionEmisorCobama = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad cobama.
+     * 
+     */
+    public boolean isCOBAMA() {
+        return cobama;
+    }
+
+    /**
+     * Define el valor de la propiedad cobama.
+     * 
+     */
+    public void setCOBAMA(boolean value) {
+        this.cobama = value;
     }
 
 }
