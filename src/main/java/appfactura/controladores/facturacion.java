@@ -40,11 +40,11 @@ public class facturacion {
 	
 	@GetMapping({"/",""})
 	public String inicio() throws IOException, MessagingException{		 
-		return "Facturacion T3B V2.2 "+(values != null);
+		return "Facturacion T3B String "+(values != null);
 	}
 	
 	@PostMapping("/generarFactura")
-	public List<Ticket> generarFactura(@RequestBody(required = true) GenerarFactura generarfacturas){			
+	public String generarFactura(@RequestBody(required = true) GenerarFactura generarfacturas){			
 		return mf.crearFactura(mf.getRequests(generarfacturas.getFclientes(), generarfacturas.getTickets()), generarfacturas.getTickets(), values);
 	}
 	
