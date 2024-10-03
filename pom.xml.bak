@@ -14,7 +14,7 @@
 	<name>appfactura</name>
 	<description>Servicios que consume PAC de facturacion T3B</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>1.8</java.version>
 		<endpointwsdl>https://ws.sicofi.com.mx/SicofiWS33/DigiFact.asmx?WSDL</endpointwsdl>
 	</properties>
 	<dependencies>
