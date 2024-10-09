@@ -203,7 +203,7 @@ public class Mfacturacion implements Ifacturacion{
 	}
 
 	@Override
-	public String crearFactura(Map<Integer, CFDIRequest40> requests, List<Ticket> tickets, JSONObject values)  {
+	public List<Ticket>  crearFactura(Map<Integer, CFDIRequest40> requests, List<Ticket> tickets, JSONObject values)  {
 		try {
 			if(requests.size() > 0) {
 				for (Integer tienda: requests.keySet()) {
@@ -285,9 +285,8 @@ public class Mfacturacion implements Ifacturacion{
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			return e.getMessage();
 		}
-		return "OK";
+		return tickets;
 	}	
 	
 	

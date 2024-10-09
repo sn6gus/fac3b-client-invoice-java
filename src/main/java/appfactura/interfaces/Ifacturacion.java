@@ -12,6 +12,6 @@ import appfactura.beans.Ticket;
 
 public interface Ifacturacion {
 	public Map<Integer, CFDIRequest40> getRequests(Fclientes fclientes, List<Ticket> tickets) ;
-	public String crearFactura(Map<Integer, CFDIRequest40> requests, List<Ticket> tickets, JSONObject values);
+	public List<Ticket> crearFactura(Map<Integer, CFDIRequest40> requests, List<Ticket> tickets, JSONObject values);
 
 }
