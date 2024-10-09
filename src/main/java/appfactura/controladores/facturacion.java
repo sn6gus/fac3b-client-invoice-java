@@ -40,7 +40,7 @@ public class facturacion {
 	
 	@GetMapping({"/",""})
 	public String inicio() throws IOException, MessagingException{		 
-		return "Facturacion T3B String "+(values != null);
+		return "Facturacion T3B String2 "+(values != null);
 	}
 	
 	@PostMapping("/generarFactura")
